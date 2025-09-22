@@ -10,7 +10,7 @@ server.get('/', (req, res) => {
 })
 
 server.post('/webhook', (req, res) => {
-    const event = req.header['x-github-event']
+    const event = req.header('x-github-event') 
     console.log(`📩 Received event: ${event}`)
     console.log("Payload:", req.body)
 
