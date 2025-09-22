@@ -12,9 +12,9 @@ server.get('/', (req, res) => {
 server.post('/webhook', (req, res) => {
     console.log('ALL HEADERS ->', req.headers)
 
-    const event = req.get('x-github-event')
+    const event = req.header['x-github-event']
     
-    console.log(`📩 Received event: ${event} new`)
+    console.log(`📩 Received event: ${event} new 1`)
 
     res.sendStatus(200)
 })
