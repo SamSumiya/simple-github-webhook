@@ -14,7 +14,7 @@ server.post('/webhook', (req, res) => {
 
     const event = req.get('x-github-event') || req.headers['x-github-event']
     
-    console.log(`📩 Received event: ${event}`)
+    console.log(`📩 Received event: ${event} new`)
 
     res.sendStatus(200)
 })
